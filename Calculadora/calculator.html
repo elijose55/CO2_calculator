@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Carbon Footprint Calculator</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="images/favicon.ico">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" id="announcement-panel">
+				<h1 id="announcement-header">Calculadora de CO₂</h1>
+				<h3 id="announcement-subheader">Calcule sua pegada de carbono com esta calculadora!</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<div id="form">
+					<form>
+						<h3 id="home-energy-label"><i class="fa fa-home" aria-hidden="true"></i> Casa</h3>	
+						<h4> Eletricidade </h4>
+						<br/>
+						<h5>- Insira abaixo o uso diário em horas de cada equipamento:</h5>
+						
+
+
+						<div class="form-group">
+							<label for="electric">TV</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="tv" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Computador</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="pc" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Ar Condicionado</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="ac" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Chuveiro Elétrico</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="chuveiro" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Ferro elétrico</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="ferro_eletrico" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Forno Elétrico</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="forno_eletrico" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Microondas</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="microondas" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Lava-Louças</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="lava_loucas" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Lava-roupa</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="lava_roupas" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Secadora de roupa</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="secadora_roupa" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Secador de cabelo</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="secadora_cabelo" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Ventilador</label>
+							<div class="input-group">
+								<div class="input-group-addon">Horas</div>
+								<input class="form-control" id="ventilador" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+						<hr>
+						
+
+						<h5>- Insira abaixo quantos equipamentos dos seguintes você possui:</h5>
+					
+
+						<div class="form-group">
+							<label for="electric">Geladeira Duplex</label>
+							<div class="input-group">
+								<div class="input-group-addon">Unidades</div>
+								<input class="form-control" id="geladeira" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+						<div class="form-group">
+							<label for="electric">Freezer</label>
+							<div class="input-group">
+								<div class="input-group-addon">Unidades</div>
+								<input class="form-control" id="freezer" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+						<hr>
+						
+
+						<h5>- Insira abaixo quantas vezes por dia você recarrega os seguintes equipamentos:</h5>
+
+						<div class="form-group">
+							<label for="electric">Laptop</label>
+							<div class="input-group">
+								<div class="input-group-addon">Vezes</div>
+								<input class="form-control" id="laptop" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+
+						<div class="form-group">
+							<label for="electric">Celular</label>
+							<div class="input-group">
+								<div class="input-group-addon">Unidades</div>
+								<input class="form-control" id="celular" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+
+
+						<hr>
+						<br/>
+						<h4> Gás </h4>
+						<div class="form-group">
+							<label for="gas">Gastos mensais com GLP</label>
+							<div class="input-group">
+								<div class="input-group-addon">Botijões</div>
+								<input class="form-control" id="glp" type="number" min="0" step="1">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável.</span>
+						</div>
+            			<div class="form-group">
+							<label for="gas">Gastos mensais com Gás Natural</label>
+							<div class="input-group">
+								<div class="input-group-addon">m³</div>
+								<input class="form-control" id="gn" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável</span>
+						</div>
+						<br/>
+						<br/>
+						<h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i> Transporte</h3>
+            
+            			<br/>
+            			<h4> Carro </h4>
+						<div class="form-group">
+							<label for="car">KM por dia percorridos com Gasolina</label>
+							<input class="form-control" id="cgasolina" type="number" min="0" step="0.01">
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável</span>
+						</div>
+						<div class="form-group">
+							<label for="car">KM por dia percorridos com Etanol</label>
+							<input class="form-control" id="cetanol" type="number" min="0" step="0.01">
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável</span>
+						</div>  
+						<div class="form-group">
+							<label for="car">KM por dia percorridos com Diesel</label>
+							<input class="form-control" id="cdiesel" type="number" min="0" step="0.01">
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável</span>
+						</div>    
+            <div class="form-group">
+							<label for="car">KM/L do veículo</label>
+							<div class="input-group">
+								<div class="input-group-addon">KM/L</div>
+								<input class="form-control" id="ckml" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável/não souber .</span>
+						</div>  
+						<hr>
+						<br/>
+
+            
+            
+            <h4> Moto </h4>
+						<div class="form-group">
+							<label for="car">KM por dia percorridos com Gasolina</label>
+							<input class="form-control" id="mgasolina" type="number" min="0" step="0.01">
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável</span>
+						</div>  
+            <div class="form-group">
+							<label for="car">KM/L do veículo</label>
+							<div class="input-group">
+								<div class="input-group-addon">KM/L</div>
+								<input class="form-control" id="mkml" type="number" min="0" step="0.01">
+							</div>
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável/não souber.</span>
+						</div> 
+            <hr>
+            <br/>
+            <h4> Ônibus </h4>
+						<div class="form-group">
+							<label for="car">KM por dia percorridos</label>
+							<input class="form-control" id="onibus" type="number" min="0" step="0.01">
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável</span>
+						</div>    
+            <hr>
+            <br/>
+            <h4> Metro </h4>
+						<div class="form-group">
+							<label for="car">KM por dia percorridos</label>
+							<input class="form-control" id="metro" type="number" min="0" step="0.01">
+							<span class="help-block">Digite 0 ou mantenha vazio se não aplicável</span>
+						</div>               
+						<br/>
+
+						<button id="calculate-btn" type="button" class="btn btn-success btn-lg btn-block">Calculate</button>
+					</form>
+				</div>
+
+				<div id="results" class="text-center">
+					<h1 id="score"></h1>
+					<br/>
+
+					<button id="recalculate-btn" type="button" class="btn btn-success btn-lg btn-block">Recalculate</button>
+				</div>
+			</div>	
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			</div>	
+		</div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
