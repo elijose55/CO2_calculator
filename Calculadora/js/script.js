@@ -224,7 +224,7 @@ $(document).ready(function() {
 				else {
 					litro_carroScore = litro_carroInput;
 				}
-				carro_dieselScore = carro_dieselInput * 30 * 12.312/litro_carroScore;
+				carro_dieselScore = carro_dieselInput * 30 * 2.393/litro_carroScore;
 			}
 
 
@@ -245,7 +245,7 @@ $(document).ready(function() {
 			if (onibusInput === 0 || onibusInput === "undefined") {
 				onibusScore = 0;
 			} else {
-				onibusScore = onibusInput * 30 * 12.312/225;
+				onibusScore = onibusInput * 30 * 2.393/225;
 			}
 
 
@@ -258,7 +258,7 @@ $(document).ready(function() {
 
 
 			// calculate scores for each category
-			var eletricidadeScore = tvScore + pcScore + acScore + chuveiroScore + ferro_eletricoScore + forno_eletricoScore + microondasScore + lava_loucasScore + lava_roupasScore + secadora_roupaScore + ventiladorScore + geladeiraScore + freezerScore + secadora_cabeloScore + laptopScore + celularScore;
+			var eletricidadeScore = 0.11 * (tvScore + pcScore + acScore + chuveiroScore + ferro_eletricoScore + forno_eletricoScore + microondasScore + lava_loucasScore + lava_roupasScore + secadora_roupaScore + ventiladorScore + geladeiraScore + freezerScore + secadora_cabeloScore + laptopScore + celularScore);
 			var casaScore = glpScore + gnScore;
 			var transporteScore = carro_gasolinaScore + carro_etanolScore + carro_dieselScore + moto_gasolinaScore + onibusScore + metroScore;
 			console.log(eletricidadeScore);
@@ -268,7 +268,7 @@ $(document).ready(function() {
 			var formattedScore = totalScore.toLocaleString("en");
 			// console.log(totalScore);
 
-			document.getElementById("score").innerHTML = formattedScore;
+			document.getElementById("score").innerHTML = formattedScore + "Kg de CO₂ por mês";
 
 			// display results
 			$("#results").show();
